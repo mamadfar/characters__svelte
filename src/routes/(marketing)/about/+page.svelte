@@ -3,6 +3,7 @@
 	<title>About</title>
 </svelte:head>
 
-<div>
-	<h1>About</h1>
-</div>
+
+<h1>About</h1>
+
+<h2>This is the about page</h2>
