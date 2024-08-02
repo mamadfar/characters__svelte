@@ -1,5 +1,5 @@
 <script lang="ts">
-	import '../styles.scss';
+	import '../../styles.scss';
 </script>
 
 <main>
@@ -7,7 +7,7 @@
 </main>
 
 <nav>
-	<a href="/">Return to Website</a>
+	<a href="/about-character">Return to Website</a>
 </nav>
 
 <style>

@@ -15,11 +15,11 @@
 	<ul>
 		{#each characters as {id, name, image, occupation}}
 			<li>
-				<a href={`/characters/${id}`} class="picture">
+				<a href={`/about-character/characters/${id}`} class="picture">
 					<img src={image} alt={name}>
 				</a>
 				<div>
-					<a href={`/characters/${id}`}><b>{name}</b></a>
+					<a href={`/about-character/characters/${id}`}><b>{name}</b></a>
 					<p class="occupation">{occupation || 'Unknown'}</p>
 				</div>
 			</li>

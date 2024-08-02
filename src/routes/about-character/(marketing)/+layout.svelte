@@ -1,12 +1,12 @@
 <script lang="ts">
-	import '../styles.scss';
+	import '../../styles.scss';
 </script>
 
 <header>
 	<nav>
-		<a href="/">Home</a>
-		<a href="/about">About</a>
-		<a href="/characters">Characters</a>
+		<a href="/about-character">Home</a>
+		<a href="/about-character/about">About</a>
+		<a href="/about-character/characters">Characters</a>
 	</nav>
 </header>
 

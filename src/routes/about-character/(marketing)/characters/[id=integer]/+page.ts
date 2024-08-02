@@ -1,5 +1,5 @@
 import { error, type Load } from '@sveltejs/kit';
-import type { ICharacter } from '../../../types/Character.type';
+import type { ICharacter } from '../../../../../types/Character.type';
 import {env as PublicEnv} from "$env/dynamic/public"
 
 export const load: Load = async ({fetch, params}) => {

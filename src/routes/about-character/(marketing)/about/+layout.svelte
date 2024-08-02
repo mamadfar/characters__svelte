@@ -3,13 +3,13 @@
 		<nav>
 			<ul>
 				<li>
-					<a href="/about/team">The Team</a>
+					<a href="/about-character/about/team">The Team</a>
 				</li>
 				<li>
-					<a href="/about/story">Our Story</a>
+					<a href="/about-character/about/story">Our Story</a>
 				</li>
 				<li>
-					<a href="/about/mission">Our Mission</a>
+					<a href="/about-character/about/mission">Our Mission</a>
 				</li>
 			</ul>
 		</nav>
