@@ -1,10 +1,10 @@
 import { error, type Load } from '@sveltejs/kit';
 import type { ICharacter } from '../../../../../types/Character.type';
-import {env as PublicEnv} from "$env/dynamic/public"
+import {API_URL} from "$env/static/private"
 
 export const load: Load = async ({fetch, params}) => {
 	const {id} = params
-	const response = await fetch(`${PublicEnv.PUBLIC_API_URL}/characters/${id}`)
+	const response = await fetch(`${API_URL}/characters/${id}`)
 
 	if (!response.ok) {
 		const err = await response.json();
