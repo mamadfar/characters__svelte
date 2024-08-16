@@ -1,0 +1,20 @@
+[
+  {
+    "slug": "project-1",
+    "title": "Project 1",
+    "description": "This is a description of project 1",
+    "image": "https://placehold.co/150"
+  },
+  {
+    "slug": "project-2",
+    "title": "Project 2",
+    "description": "This is a description of project 2",
+    "image": "https://placehold.co/150"
+  },
+  {
+    "slug": "project-3",
+    "title": "Project 3",
+    "description": "This is a description of project 3",
+    "image": "https://placehold.co/150"
+  }
+]
