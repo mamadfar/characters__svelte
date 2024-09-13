@@ -1,12 +1,10 @@
 <script lang="ts">
-
-	import MainLayout from '../components/layouts/MainLayout.svelte';
-
-	export let data;
+import {page} from '$app/stores';
+import MainLayout from '../components/layouts/MainLayout.svelte';
 </script>
 
 <div>
-	{#if data.pathname.includes('/portfolio/')}
+	{#if $page.url.pathname.includes('/portfolio/')}
 		<slot />
 	{:else}
 		<MainLayout>

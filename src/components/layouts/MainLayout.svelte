@@ -11,6 +11,7 @@
 		<a href="/optional">Optional routing</a>
 		<a href="/priority">Route Priority</a>
 		<a href="/portfolio">Portfolio</a>
+		<a href="/movie-log">Movie Log</a>
 	</nav>
 </header>
 

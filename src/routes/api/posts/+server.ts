@@ -7,5 +7,5 @@ export const GET = async (event) => {
 		}
 	});
 
-	return new Response(response.body)
-}
+	return new Response(response.body);
+};
