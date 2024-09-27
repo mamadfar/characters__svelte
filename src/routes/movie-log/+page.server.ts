@@ -1,5 +1,5 @@
 import type { PageServerLoad } from './$types';
-import { type Actions, fail } from '@sveltejs/kit';
+import { type Actions, fail, redirect } from '@sveltejs/kit';
 
 type Movie = {
 	id: string;
@@ -9,7 +9,7 @@ type Movie = {
 	comment?: string;
 };
 
-const movies: Movie[] = [
+let movies: Movie[] = [
 	{
 		id: 'df5105ff-9d87-4bd9-be62-4743c0a243b9',
 		name: 'Everything Everywhere All at Once',
@@ -52,7 +52,7 @@ const validateMovie = (movieData: Partial<Movie>): { success: false; error: stri
 };
 
 export const actions: Actions = {
-	async default({ request }) {
+	async logMovie({ request }) {
 		const formData = await request.formData();
 		const movie = {
 			name: (formData.get('name') ?? '') as string,
@@ -62,11 +62,19 @@ export const actions: Actions = {
 		};
 		const validation = validateMovie(movie);
 
+		movies.push({
+			...movie,
+			id: crypto.randomUUID()
+		})
+
 		if (!validation.success) {
 			return fail(400, {error: validation.error, ...movie} );
 		}
-		return {
-			success: true,
-		}
+		// throw redirect(303, '/movie-log'); //? after form validation, the status code is 303
+	},
+	async deleteMovie({request}) {
+		const movieId = (await request.formData()).get('movieToDelete');
+		movies = movies.filter(movie => movie.id !== movieId);
+		// throw redirect(303, '/movie-log');
 	}
 };

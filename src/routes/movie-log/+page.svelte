@@ -24,7 +24,7 @@
             update()
           }
         }} method="post" action="?/logMovie"> -->
-<form use:enhance method="post">
+<form use:enhance method="post" action="?/logMovie">
 	<label for="name">Name</label>
 	<input id="name" name="name" value={form?.name ?? null} />
 
@@ -73,7 +73,7 @@
 			<td class="name">{movie.name}</td>
 			<td class="release">{movie.release}</td>
 			<td class="rating">{movie.rating}</td>
-			<td class="comment">{movie.comment}</td>
+			<td class="comment">{movie.comment || ''}</td>
 			<td class="action">
 				<form use:enhance method="post" action="?/deleteMovie">
 					<button type="submit" name="movieToDelete" value={movie.id}>Delete</button>

@@ -7,7 +7,7 @@ structure:
 ```ts
 
 export const actions = {
-	async default(event) {
+	async logMovie(event) {
 		// The code here
 	},
 	async getMovieLog(event) {
@@ -16,6 +16,13 @@ export const actions = {
 };
 
 ```
+- We should keep in mind that when we have only one action, we should name it `default`, otherwise we should name it
+  according to the action name.
+
+## use:enhance
+If we wanna use `actions`, we need to take care of redirections to a clear URL, otherwise, after each action call, we will see
+in the URL, there is a query param with exact same name as our called action. To avoid this, we can use `use:enhance` in the
+`<form>` tag and remove the redirect logic from our actions.
 
 # fail
 

@@ -7,4 +7,4 @@ export let data
 </svelte:head>
 
 <h1>Advanced Layouts</h1>
-<h2>Hi {data.user}</h2>
+<h2>Hi {data.user || 'dear'}</h2>
