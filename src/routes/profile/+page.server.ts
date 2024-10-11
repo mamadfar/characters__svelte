@@ -1,3 +1,5 @@
+export const prerender = false;
+
 import { type Actions, redirect, type ServerLoad } from '@sveltejs/kit';
 
 export const load: ServerLoad = async ({ locals }) => {

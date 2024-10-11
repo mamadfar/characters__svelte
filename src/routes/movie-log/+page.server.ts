@@ -1,5 +1,7 @@
+export const prerender = false;
+
 import type { PageServerLoad } from './$types';
-import { type Actions, fail, redirect } from '@sveltejs/kit';
+import { type Actions, fail } from '@sveltejs/kit';
 
 type Movie = {
 	id: string;

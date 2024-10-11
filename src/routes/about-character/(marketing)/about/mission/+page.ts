@@ -1,5 +1,6 @@
 import { error, type Load } from '@sveltejs/kit';
 
 export const load: Load = async () => {
-	throw error(404, 'There was no mission!')
+	//? Commented because in the build time, the compiler will throw an error
+	// throw error(404, 'There was no mission!')
 }

@@ -14,6 +14,7 @@
 		<a href="/priority">Route Priority</a>
 		<a href="/portfolio">Portfolio</a>
 		<a href="/movie-log">Movie Log</a>
+		<a href="/assets">Assets</a>
 		{#if user}
 			<a href="/profile">{user}</a>
 		{:else}
