@@ -1,5 +1,7 @@
 <script lang="ts">
 	import '../../routes/styles.scss';
+
+	export let user: string | undefined;
 </script>
 
 <header>
@@ -12,6 +14,11 @@
 		<a href="/priority">Route Priority</a>
 		<a href="/portfolio">Portfolio</a>
 		<a href="/movie-log">Movie Log</a>
+		{#if user}
+			<a href="/profile">{user}</a>
+		{:else}
+			<a href="/login">Login</a>
+		{/if}
 	</nav>
 </header>
 
